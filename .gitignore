@@ -1,0 +1,31 @@
+# Node modules
+/node_modules/
+
+# Output directories
+/dist/
+/lib/
+
+# Test output
+/test/**/*.js
+/test/**/*.js.map
+/test/**/*.d.ts
+/test/**/*.d.ts.map
+
+# Compiled JS and types from src or root
+/src/**/*.js
+/src/**/*.js.map
+/src/**/*.d.ts
+/src/**/*.d.ts.map
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map
+
+# Size check output
+my-element.bundled.js
+
+# Lit analyzer output
+custom-elements.json
+
+# VS Code config (optional)
+.vscode/
