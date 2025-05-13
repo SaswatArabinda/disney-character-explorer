@@ -1,23 +1,19 @@
 import { LitElement, html } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import styles from "../styles/filter-panel-styles";
-import { Character } from "../types";
 
 @customElement("filter-panel")
 export class FilterPanel extends LitElement {
   static override styles = styles;
 
-  @property({ type: Array }) characters: Character[] = [];
   @property({ type: Object }) selected = { franchise: "", role: "", era: "" };
 
   @state() private franchiseOptions: { label: string; value: string }[] = [];
   @state() private roleOptions: string[] = [];
   @state() private eraOptions: string[] = [];
 
-  override willUpdate(changedProps: Map<string, unknown>) {
-    if (changedProps.has("characters")) {
+  override willUpdate() {
       this.generateFilterOptions();
-    }
   }
 
   private generateFilterOptions() {
